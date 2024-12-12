@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATL Gladiators</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            border: none;
+        }
+
+        .navigation-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nav-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,14 +65,25 @@
         <button class="cta">Sponsor Us</button>
     </header>
 
+    <!-- Hero Section with Slider -->
     <section id="hero">
-        <div class="slider">
-            <div class="slide active">Join the Gladiator Legacy: Sponsor Atlanta's Rising Cricket Stars</div>
-            <!-- Add more slides as needed -->
+        <div class="slider-container">
+            <div class="slides" id="slides">
+                <!-- Embed the slides using iframes -->
+                <div class="slide"><iframe src="slide1.html"></iframe></div>
+                <div class="slide"><iframe src="slide2.html"></iframe></div>
+                <div class="slide"><iframe src="slide3.html"></iframe></div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-button" id="prev">Previous</button>
+                <button class="nav-button" id="next">Next</button>
+            </div>
         </div>
-        <button class="learn-more">Learn More</button>
     </section>
 
+    <!-- Other sections remain unchanged -->
     <section id="team-highlights">
         <h2>Team Highlights</h2>
         <div class="infographics">
@@ -56,7 +110,31 @@
         <p>&copy; 2024 ATL Gladiators. All rights reserved.</p>
     </footer>
 
-    <!-- Include JavaScript at the end of the body for better performance -->
-    <script src="script.js"></script>
+    <!-- Include JavaScript for Slider Functionality -->
+    <script>
+        const slides = document.getElementById('slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            const slideWidth = slides.children[0].offsetWidth;
+            slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.children.length - 1;
+            updateSlidePosition();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.children.length;
+            updateSlidePosition();
+        });
+
+        // Ensure the slider resizes correctly on window resize
+        window.addEventListener('resize', updateSlidePosition);
+    </script>
 </body>
 </html>
