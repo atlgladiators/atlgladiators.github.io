@@ -115,6 +115,24 @@
         .header-text {
             text-align: left;
         }
+
+        #playerList {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        
+        #playerList ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #playerList li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
         }
     </style>
 </head>
@@ -145,6 +163,38 @@
         <p>ACZ Gladiators is Alpharetta's premier cricket club, dedicated to fostering talent and promoting the spirit of cricket in our community. With a state-of-the-art facility and a passionate team, we're committed to excellence both on and off the field.</p>
         <a href="prospectus.html" class="cta-button">Become a Sponsor</a>
     </div>
+
+     <div id="playerList">
+        <h2>Player List</h2>
+        <ul id="players"></ul>
+    </div>
+
+    <script>
+        // Function to fetch and display player data
+        function fetchPlayers() {
+    fetch('https://cricclubs.com/PVCL/viewTeam.do?teamId=188&clubId=1008094')
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const playerRows = doc.querySelectorAll('table.table-striped tr');
+            const playerList = document.getElementById('players');
+            
+            playerRows.forEach(row => {
+                const playerName = row.querySelector('td:nth-child(2)');
+                if (playerName) {
+                    const li = document.createElement('li');
+                    li.textContent = playerName.textContent.trim();
+                    playerList.appendChild(li);
+                }
+            });
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+        // Call the function when the page loads
+        window.onload = fetchPlayers;
+    </script>
 
     <div class="sponsor-section">
         <h2>Our Valued Sponsors</h2>
