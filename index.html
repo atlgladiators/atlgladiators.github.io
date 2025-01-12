@@ -37,7 +37,8 @@
             font-weight: bold;
         }
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
             padding: 2rem 0;
@@ -61,14 +62,15 @@
         }
         .sponsor-logos {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             margin-top: 2rem;
         }
         .sponsor-logo {
-            flex: 1;
-            max-width: 100px;
+            width: 22%;
+            min-width: 150px;
+            max-width: 200px;        
             height: 100px;
             margin: 0 1rem;
             display: flex;
