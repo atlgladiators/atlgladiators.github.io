@@ -134,11 +134,11 @@
             border-bottom: 1px solid #eee;
         }
 
-        
         .scrollable-table-container {
             max-height: 300px;
-            overflow-y: auto;
+            overflow-y: hidden;
             border: 1px solid #ddd;
+            position: relative;
         }
         .scrollable-table {
             width: 100%;
@@ -153,6 +153,11 @@
             background-color: #f2f2f2;
             position: sticky;
             top: 0;
+        }
+        .player-photo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
         }
         }
     </style>
@@ -190,6 +195,50 @@
         <ul id="players"></ul>
     </div>
 
+    <div class="scrollable-table-container" id="tableContainer">
+        <table class="scrollable-table">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>CricClub Profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="Aftab.png" alt="Player 1" class="player-photo"></td>
+                    <td>Aftab Chowdhury</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=3412990&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="Akshay.png" alt="Player 2" class="player-photo"></td>
+                    <td>Akshay Gour</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=2926233&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="Ankit.png" alt="Player 3" class="player-photo"></td>
+                    <td>Ankit Nigam</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=4197901&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const tableContainer = document.getElementById('tableContainer');
+        let scrollAmount = 0;
+
+        function autoScroll() {
+            scrollAmount += 1;
+            tableContainer.scrollTop = scrollAmount;
+            if (scrollAmount >= tableContainer.scrollHeight - tableContainer.clientHeight) {
+                scrollAmount = 0;
+            }
+        }
+
+        setInterval(autoScroll, 50);
+    </script>
+    
     <div class="scrollable-table-container">
         <table class="scrollable-table">
             <thead>
