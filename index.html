@@ -61,22 +61,41 @@
             text-align: center;
         }
         .sponsor-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .sponsor-logo {
+        width: 150px;
+        height: 150px;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ddd;
+    }
+
+    .sponsor-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sponsor-logos {
+            justify-content: space-around;
         }
+    }
+
+    @media screen and (max-width: 480px) {
         .sponsor-logo {
-            width: 22%;
-            min-width: 150px;
-            max-width: 200px;        
-            height: 100px;
-            margin: 0 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-}
+            width: 120px;
+            height: 120px;
+        }
+    }
         }
     </style>
 </head>
