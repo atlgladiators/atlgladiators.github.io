@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACZ Gladiators Cricket Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #00843d;
+            --secondary-color: #4d4d4d;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             
-            background-color: #e6f3ff; /* Light blue background */
-            color: #333; /* Darker text for contrast */
+            background-color: #ffffff;
+            color: #333;
         }
          header {
             position: relative;
@@ -46,11 +52,13 @@
             font-size: 1.2rem;
         }
         nav {
-            background: #f4f4f4;
-            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
         }
         nav ul {
             list-style-type: none;
+            margin: 0
             padding: 0;
             display: flex;
             justify-content: center;
@@ -59,8 +67,8 @@
             margin: 0 1rem;
         }
         nav ul li a {
+            color: white;
             text-decoration: none;
-            color: #333;
             font-weight: bold;
         }
         .container {
@@ -70,6 +78,11 @@
             overflow: hidden;
             padding: 2rem 0;
         }
+
+        .container h2 {
+            color: var(--primary-color);
+        }
+        
         .cta-button {
             display: inline-block;
             background: #e74c3c;
@@ -177,6 +190,13 @@
             height: 100px;
             object-fit: cover;
         }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -346,9 +366,7 @@
     </div>
 
     <footer>
-        <div class="container">
             <p>&copy; 2025 ACZ Gladiators Cricket Club. All rights reserved.</p>
-        </div>
     </footer>
 </body>
 </html>
