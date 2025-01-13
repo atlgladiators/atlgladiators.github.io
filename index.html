@@ -206,6 +206,45 @@
             color: white;
             margin-top: 20px;
         }
+
+        .scrollable-nav {
+    background-color: var(--primary-color);
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scrollable-nav li {
+    margin: 0;
+}
+
+.scrollable-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.scrollable-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .scrollable-nav a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -219,7 +258,7 @@
     </div>
     </header>
 
-    <nav>
+    <nav class="scrollable-nav">
         <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="team.html">Team</a></li>
