@@ -7,159 +7,75 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-            color: #333;
         }
-        header {
+        .header {
             background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: #fff;
+            color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        nav {
-            background: #f4f4f4;
-            padding: 1rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        .player-container {
             display: flex;
-            justify-content: center;
+            overflow-x: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px;
+            border-radius: 10px;
         }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 2rem 0;
-        }
-        .cta-button {
-            display: inline-block;
-            background: #e74c3c;
-            color: #fff;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .cta-button:hover {
-            background: #c0392b;
-        }
-        .sponsor-section {
-            background: #f9f9f9;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .sponsor-logos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-    }
-
-    .sponsor-logo {
-        width: 150px;
-        height: 150px;
-        margin: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #ddd;
-    }
-
-    .sponsor-logo img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-
-    @media screen and (max-width: 768px) {
-        .sponsor-logos {
-            justify-content: space-around;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .sponsor-logo {
-            width: 120px;
-            height: 120px;
-        }
-    }
-        header {
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .logo {
-            width: 100px;
-            height: 100px;
+        .player-card {
+            flex: 0 0 auto;
+            width: 200px;
             margin-right: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        
-        .header-text {
-            text-align: left;
-        }
-
-        #playerList {
-            max-height: 300px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        
-        #playerList ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        #playerList li {
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .scrollable-table-container {
-            max-height: 300px;
-            overflow-y: hidden;
-            border: 1px solid #ddd;
-            position: relative;
-        }
-        .scrollable-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .scrollable-table th, .scrollable-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        .scrollable-table th {
-            background-color: #f2f2f2;
-            position: sticky;
-            top: 0;
+        .player-card:hover {
+            transform: translateY(-5px);
         }
         .player-photo {
-            width: 50px;
-            height: 50px;
+            width: 100%;
+            height: 200px;
             object-fit: cover;
         }
+        .player-info {
+            padding: 15px;
         }
+        .player-name {
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+        .player-number {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .back-to-home {
+            margin: 20px 0;
+        }
+        
+        .back-to-home a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #1e3c72;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-to-home a:hover {
+            background-color: #2a5298;
+        }
+
     </style>
 </head>
 <body>
@@ -203,7 +119,7 @@
             <tbody id="tableBody"></tbody>
         </table>
     </div>
-
+<!--
     <script>
         const csvContent = `
 "297","Rahul Shandilya","Spring T20 2024","ACZ Gladiators",""
@@ -268,6 +184,51 @@
         const parsedData = parseCSV(csvContent);
         populateTable(parsedData);
     </script>
+   -->
+
+    
+    <div class="player-container">
+        <div class="player-card">
+            <img src="https://via.placeholder.com/200x200" alt="Player 1" class="player-photo">
+            <div class="player-info">
+                <h3 class="player-name">John Doe</h3>
+                <p class="player-number">#10</p>
+            </div>
+        </div>
+        <div class="player-card">
+            <img src="https://via.placeholder.com/200x200" alt="Player 2" class="player-photo">
+            <div class="player-info">
+                <h3 class="player-name">Jane Smith</h3>
+                <p class="player-number">#7</p>
+            </div>
+        </div>
+        <div class="player-card">
+            <img src="https://via.placeholder.com/200x200" alt="Player 3" class="player-photo">
+            <div class="player-info">
+                <h3 class="player-name">Mike Johnson</h3>
+                <p class="player-number">#22</p>
+            </div>
+        </div>
+        <!-- Add more player cards as needed -->
+    </div>
+
+    <script>
+        const container = document.querySelector('.player-container');
+        let scrollAmount = 0;
+        const step = 1;
+
+        function autoScroll() {
+            scrollAmount += step;
+            container.scrollLeft = scrollAmount;
+            if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+                scrollAmount = 0;
+            }
+            requestAnimationFrame(autoScroll);
+        }
+
+        autoScroll();
+    </script>
+
     
    <div class="back-to-home">
     <a href="index.html">Back to Home</a>
