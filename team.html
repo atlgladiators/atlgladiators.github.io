@@ -75,7 +75,161 @@
         .back-to-home a:hover {
             background-color: #2a5298;
         }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #c0392b;
+        }
+        .sponsor-section {
+            background: #f9f9f9;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .sponsor-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
 
+    .sponsor-logo {
+        width: 150px;
+        height: 150px;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ddd;
+    }
+
+    .sponsor-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 768px) {
+        .sponsor-logos {
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .sponsor-logo {
+            width: 120px;
+            height: 120px;
+        }
+    }
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        
+        .header-text {
+            text-align: left;
+        }
+
+        #playerList {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        
+        #playerList ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #playerList li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .scrollable-table-container {
+            max-height: 300px;
+            overflow-y: hidden;
+            border: 1px solid #ddd;
+            position: relative;
+        }
+        .scrollable-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .scrollable-table th, .scrollable-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .scrollable-table th {
+            background-color: #f2f2f2;
+            position: sticky;
+            top: 0;
+        }
+        .player-photo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        
     </style>
 </head>
 <body>
@@ -87,148 +241,103 @@
         <img src="team.png" alt="ACZ Gladiators Logo" class="logo">
         <div class="header-text">
             <h1>ACZ Gladiators Cricket Club</h1>
-            <p>Unleashing Cricket Excellence in Alpharetta, GA</p>
+            <p>Unleashing Cricket Excellence in Greater Atlanta Metro region, GA</p>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="prospectus.html">Sponsors</a></li>
-        </ul>
-    </nav>
-
     <div id="playerList">
-        <h2>Meet our team</h2>
+        <h2>Meet our <a href="https://cricclubs.com/PVCL/viewTeam.do?teamId=188&clubId=1008094">team</a></h2>
         <ul id="players"></ul>
     </div>
 
-    <div class="scrollable-table-container">
+   <div class="scrollable-table-container" id="tableContainer">
         <table class="scrollable-table">
             <thead>
                 <tr>
-                    <th>CricClubs Player ID</th>
-                    <th>Player Name</th>
-                    <th>Series and Division</th>
-                    <th>Team Name</th>
-                    <th>Jersey Number</th>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>CricClub Profile</th>
                 </tr>
             </thead>
-            <tbody id="tableBody"></tbody>
+            <tbody>
+                <tr>
+                    <td><img src="images/Aftab.png" alt="Player 1" class="player-photo"></td>
+                    <td>Aftab Chowdhury</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=3412990&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Akshay.png" alt="Player 2" class="player-photo"></td>
+                    <td>Akshay Gour</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=2926233&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Ankit.png" alt="Player 3" class="player-photo"></td>
+                    <td>Ankit Nigam</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=4197901&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Joel.png" alt="Player 4" class="player-photo"></td>
+                    <td>Joel Aranha</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=903736&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Krishna.png" alt="Player 5" class="player-photo"></td>
+                    <td>Krishna Reddy</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=3523462&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Meghal.png" alt="Player 6" class="player-photo"></td>
+                    <td>Meghal Barot</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=765659&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Rashid.png" alt="Player 7" class="player-photo"></td>
+                    <td>Mohamed Rashid</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=650790&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Noman.png" alt="Player 8" class="player-photo"></td>
+                    <td>Noman Ahsanuzzaman</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=653876&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Rahul.png" alt="Player 9" class="player-photo"></td>
+                    <td>Rahul Shandilya</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=297&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Rajdeep.png" alt="Player 10" class="player-photo"></td>
+                    <td>Rajdeep Darbar</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=2639659&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/RP.png" alt="Player 11" class="player-photo"></td>
+                    <td>Ridwan Palash</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=254288&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Rushi.png" alt="Player 12" class="player-photo"></td>
+                    <td>Rushi Amin</td>
+                    <td><a href="https://cricclubs.com/PVCL/viewPlayer.do?playerId=1471837&clubId=1008094">CricClub Profile</a></td>
+                </tr>
+            </tbody>
         </table>
     </div>
-<!--
-    <script>
-        const csvContent = `
-"297","Rahul Shandilya","Spring T20 2024","ACZ Gladiators",""
-"254288","Ridwan Palash","Spring T20 2024","ACZ Gladiators","3"
-"312051","Srikanth Ranganathan","Spring T20 2024","ACZ Gladiators",""
-"350396","Pavan Kompella","Spring T20 2024","ACZ Gladiators",""
-"432587","Saravana Kumar Ramanujam","Spring T20 2024","ACZ Gladiators",""
-"650623","Ashok Pilla","Spring T20 2024","ACZ Gladiators",""
-"650790","Mohammed Rashid","Spring T20 2024","ACZ Gladiators","10"
-"653392","Ragib Chowdhury","Spring T20 2024","ACZ Gladiators",""
-"653876","Noman Ahsanuzzaman","Spring T20 2024","ACZ Gladiators",""
-"654524","Maulik Chokshi","Spring T20 2024","ACZ Gladiators",""
-"765659","Meghal Barot","Spring T20 2024","ACZ Gladiators","11"
-"807024","Pranay Kumar","Spring T20 2024","ACZ Gladiators",""
-"851197","Naveen Kumar Aare","Spring T20 2024","ACZ Gladiators",""
-"903736","Joel Aranha","Spring T20 2024","ACZ Gladiators",""
-"1471837","Rushi Amin","Spring T20 2024","ACZ Gladiators",""
-"1576501","Moeed Ahmad","Spring T20 2024","ACZ Gladiators",""
-"1677359","Rana Masud","Spring T20 2024","ACZ Gladiators","08"
-"1818861","Bharat Chandrasekar","Spring T20 2024","ACZ Gladiators",""
-"2037037","Vamshi Tho","Spring T20 2024","ACZ Gladiators","09"
-"2051046","Raeed Zaman","Spring T20 2024","ACZ Gladiators",""
-"2164295","Aryan Ghotkar Sec","Spring T20 2024","ACZ Gladiators","99"
-"2639659","Rajdeep Darbar","Spring T20 2024","ACZ Gladiators",""
-"2926233","Akshay Gour","Spring T20 2024","ACZ Gladiators",""
-"3188855","Sushrut Rode","Spring T20 2024","ACZ Gladiators",""
-"3340361","Sankalp Dekate","Spring T20 2024","ACZ Gladiators",""
-"3383472","Gauranshu Sharma","Spring T20 2024","ACZ Gladiators","99"
-"3412990","Aftab Chowdhury","Spring T20 2024","ACZ Gladiators","97"
-"3523462","Krishna Reddy","Spring T20 2024","ACZ Gladiators",""
-"3672582","Neal Patel","Spring T20 2024","ACZ Gladiators","7"
-"3672807","Ram Muliyala","Spring T20 2024","ACZ Gladiators",""
-"3673709","Sai Advanapu","Spring T20 2024","ACZ Gladiators",""
-"3675110","Alok Singh","Spring T20 2024","ACZ Gladiators","1"
-"4027837","Mihir Nayee","Spring T20 2024","ACZ Gladiators",""
-"4087046","Naman Patel","Spring T20 2024","ACZ Gladiators","19"
-"4087137","Sanjith David","Spring T20 2024","ACZ Gladiators",""
-"4197901","Ankit Nigam Gajjala","Spring T20 2024","ACZ Gladiators",""
-"4199163","Sai Ram","Spring T20 2024","ACZ Gladiators","7"
-"4327569","Indraj Jayasundara","Spring T20 2024","ACZ Gladiators",""
-`;
-
-        function parseCSV(csv) {
-            const lines = csv.split('\n');
-            const data = lines.map(line => line.split(','));
-            return data.slice(1); // Remove header row
-        }
-
-        function populateTable(data) {
-            const tableBody = document.getElementById('tableBody');
-            data.forEach(row => {
-                const tr = document.createElement('tr');
-                row.forEach(cell => {
-                    const td = document.createElement('td');
-                    td.textContent = cell;
-                    tr.appendChild(td);
-                });
-                tableBody.appendChild(tr);
-            });
-        }
-
-        const parsedData = parseCSV(csvContent);
-        populateTable(parsedData);
-    </script>
-   -->
-
-    
-    <div class="player-container">
-        <div class="player-card">
-            <img src="https://via.placeholder.com/200x200" alt="Player 1" class="player-photo">
-            <div class="player-info">
-                <h3 class="player-name">John Doe</h3>
-                <p class="player-number">#10</p>
-            </div>
-        </div>
-        <div class="player-card">
-            <img src="https://via.placeholder.com/200x200" alt="Player 2" class="player-photo">
-            <div class="player-info">
-                <h3 class="player-name">Jane Smith</h3>
-                <p class="player-number">#7</p>
-            </div>
-        </div>
-        <div class="player-card">
-            <img src="https://via.placeholder.com/200x200" alt="Player 3" class="player-photo">
-            <div class="player-info">
-                <h3 class="player-name">Mike Johnson</h3>
-                <p class="player-number">#22</p>
-            </div>
-        </div>
-        <!-- Add more player cards as needed -->
-    </div>
 
     <script>
-        const container = document.querySelector('.player-container');
+        const tableContainer = document.getElementById('tableContainer');
         let scrollAmount = 0;
-        const step = 1;
 
         function autoScroll() {
-            scrollAmount += step;
-            container.scrollLeft = scrollAmount;
-            if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+            scrollAmount += 1;
+            tableContainer.scrollTop = scrollAmount;
+            if (scrollAmount >= tableContainer.scrollHeight - tableContainer.clientHeight) {
                 scrollAmount = 0;
             }
-            requestAnimationFrame(autoScroll);
         }
 
-        autoScroll();
+        setInterval(autoScroll, 50);
     </script>
-
     
    <div class="back-to-home">
     <a href="index.html">Back to Home</a>
