@@ -212,6 +212,7 @@
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    text-align: center; /* Center the inline-flex container */
 }
 
 .scrollable-nav ul {
@@ -219,6 +220,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    justify-content: center; /* Center the flex items */
 }
 
 .scrollable-nav li {
@@ -239,6 +241,10 @@
 }
 
 @media (max-width: 768px) {
+    .scrollable-nav ul {
+        justify-content: flex-start; /* Align to start on smaller screens */
+    }
+    
     .scrollable-nav a {
         padding: 10px 15px;
         font-size: 14px;
@@ -257,7 +263,7 @@
         </div>
     </div>
     </header>
-
+    <p></p>
     <nav class="scrollable-nav">
         <ul>
             <li><a href="about.html">About</a></li>
