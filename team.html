@@ -204,7 +204,7 @@
             border-bottom: 1px solid #eee;
         }
 
-        .scrollable-table-container {
+        /*.scrollable-table-container {
             max-height: 600px;
             overflow-y: auto;
             border: 1px solid #ddd;
@@ -223,7 +223,24 @@
             background-color: #f2f2f2;
             position: sticky;
             top: 0;
+        }*/
+
+        .table-container {
+            margin-bottom: 20px;
         }
+        .standard-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .standard-table th, .standard-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .standard-table th {
+            background-color: #f2f2f2;
+        }
+
         .player-photo {
             width: 100px;
             height: 100px;
@@ -250,8 +267,8 @@
         <ul id="players"></ul>
     </div>
 
-   <div class="scrollable-table-container" id="tableContainer">
-        <table class="scrollable-table">
+   <div class="table-container" id="tableContainer">
+        <table class="standard-table">
             <thead>
                 <tr>
                     <th>Photo</th>
@@ -325,6 +342,7 @@
     </div>
 
     <script>
+        /*
         const tableContainer = document.getElementById('tableContainer');
         let scrollAmount = 0;
 
@@ -337,6 +355,7 @@
         }
 
         setInterval(autoScroll, 50);
+        */
     </script>
     
    <div class="back-to-home">
