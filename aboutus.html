@@ -22,9 +22,24 @@
         header {
             background-color: var(--primary-color);
             color: var(--background-color);
-            text-align: center;
             padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .club-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        } 
         main {
             max-width: 800px;
             margin: 0 auto;
@@ -76,7 +91,11 @@
 </head>
 <body>
     <header>
-        <h1>About ACZ Gladiators</h1>
+        <div class="logo-container">
+            <img src="team.png" alt="ACZ Gladiators Logo">
+            <span class="club-name">ACZ Gladiators</span>
+        </div>
+        <h1>About Us</h1>
     </header>
     <main>
         <section class="mission-statement">
