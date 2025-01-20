@@ -253,9 +253,47 @@
     }
 }
 
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #banner-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding-top: 20vh;
+            color: var(--background-color);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
+    <!--
     <header>
         <div class="logo-container">
            
@@ -265,7 +303,19 @@
                  <img src="team.png" alt="ACZ Gladiators Logo">
         </div>
     </div>
-    </header>
+    </header> -->
+
+    <div class="banner">
+        <video id="banner-video" autoplay loop muted playsinline>
+            <source src="images/acz.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>ACZ Gladiators Cricket Club</h1>
+            <p>Unleashing Cricket Excellence in Atlanta Metro area, GA</p>
+        </div>
+    </div>
     <p></p>
     <nav class="scrollable-nav">
         <ul>
