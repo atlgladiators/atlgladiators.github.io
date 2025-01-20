@@ -56,14 +56,9 @@
             <source src="images/acz.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-       <div class="overlay"></div>
-        <div class="banner-content">
-            <h1>ACZ Gladiators Cricket Club</h1>
-        </div>
-    </div>
+       </div>
 
-    <!--<div id="playerList">-->
-    <div class="content">
+    <div class="content" id="playerList">
         <h2>Meet our <a href="https://cricclubs.com/PVCL/viewTeam.do?teamId=188&clubId=1008094" target="_blank" rel="noopener noreferrer">team</a></h2>
         <ul id="players"></ul>
     <!-- <div class="table-container" id="tableContainer"> -->
@@ -139,7 +134,19 @@
             </tbody>
         </table>
     </div>
-
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('banner-video');
+    
+    video.addEventListener('loadeddata', function() {
+        setTimeout(function() {
+            document.getElementById('playerList').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }, 12000); // Adjust the delay (in milliseconds) as needed
+    });
+});
+</script>
     
    <div class="container">
     <a href="index.html" class="cta-button">Back to Home</a>
