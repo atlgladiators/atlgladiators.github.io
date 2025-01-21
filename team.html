@@ -47,6 +47,14 @@
         .content {
             color: red;
         }
+        .sticky-header th {
+          position: sticky;
+          top: 0;
+          background-color: var(--primary-color);
+          color: var(--background-color);
+          z-index: 1;
+        }
+
 
     </style>
 </head>
@@ -64,7 +72,7 @@
     <!-- <div class="table-container" id="tableContainer"> -->
         <table class="team-table">
             <thead>
-                <tr>
+                <tr class="sticky-header">
                     <th>Photo</th>
                     <th>Name</th>
                     <th>CricClub Profile</th>
