@@ -161,19 +161,6 @@
   }
 </style>
 
-    <script>
-  document.getElementById('show-more-link').onclick = function() {
-    document.getElementById('report-short').style.display = 'none';
-    document.getElementById('report-full').style.display = 'block';
-    return false;
-  };
-  document.getElementById('show-less-link').onclick = function() {
-    document.getElementById('report-full').style.display = 'none';
-    document.getElementById('report-short').style.display = 'block';
-    return false;
-  };
-</script>
-
     
 <div class="match-report">
     <img class="match-report-image" src="/images/ParamveerT202025Team.jpeg" alt="Paramveer Team Photo">
@@ -197,7 +184,7 @@
       <li>Our field placement is improving as we bowled our 20 overs in the given time, even earlier, so we are starting to do a few things right, while still having room for improvement.</li>
       <li><b>Batting:</b> Job was half done with the way our bowlers bowled. Our discussion in the huddle was simple: don't give them opportunities to catch, play everything on the ground, and punish the loose balls – and the game is ours.</li>
     </ul>
-    <a href="javascript:void(0);" id="report-full" style="color:#1e88e5;">See more</a>
+    <a href="javascript:void(0);" id="show-more-link" style="color:#1e88e5;">See more</a>
   </div>
   <div id="report-full" style="display:none;">
     <ul>
@@ -208,9 +195,23 @@
       <li><b>Special shout out to Indraj and Sukesh</b> for coming and supporting the team from the sidelines. Having Sukesh on the ground on time gave us the opportunity for a substitute and we sure did utilize it. Again, a winning season is about all collective efforts on and off the field, so let's continue to do that for the remainder of the season.</li>
       <li><b>1..2..3.. Go Glads..!!</b></li>
     </ul>
-    <a href="javascript:void(0);" id="report-short" style="color:#1e88e5;">Show less</a>
+    <a href="javascript:void(0);" id="show-less-link" style="color:#1e88e5;">Show less</a>
   </div>
 </div>
+
+        <script>
+  document.getElementById('show-more-link').onclick = function() {
+    document.getElementById('report-short').style.display = 'none';
+    document.getElementById('report-full').style.display = 'block';
+    return false;
+  };
+  document.getElementById('show-less-link').onclick = function() {
+    document.getElementById('report-full').style.display = 'none';
+    document.getElementById('report-short').style.display = 'block';
+    return false;
+  };
+</script>
+    
 
   <div class="match-report">
   
