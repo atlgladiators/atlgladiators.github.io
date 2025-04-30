@@ -1,134 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACZ Gladiators - Results and Fixtures</title>
-    <link rel="icon" href="team.png" type="image/png">
-    <link rel="shortcut icon" href="team.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .banner {
-            height: 25vh; /* Adjust this value to control the banner height */
-        }
-        .content {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: var(--background-color);
-        }
-        .results-fixtures {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 2rem;
-        }
-        .results-fixtures th, .results-fixtures td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--primary-color);
-        }
-        .results-fixtures th {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-        .results-fixtures tr:nth-child(even) {
-            background-color: #f8f8f8;
-        }
-        .result-win {
-            color: green;
-            font-weight: bold;
-        }
-        .result-loss {
-            color: red;
-            font-weight: bold;
-        }
-        .fixture-upcoming {
-            font-style: italic;
-        }
-        .content {
-            color: red;
-        }
-    </style>
-
-    <style>
-  .match-report-container {
-    max-width: 700px;
-    margin: 30px auto;
-    border: 3px solid #1a237e;
-    border-radius: 12px;
-    background: #f8fafc;
-    box-shadow: 0 4px 16px rgba(26,35,126,0.08);
-    padding: 32px 24px 24px 24px;
-    font-family: 'Segoe UI', Arial, sans-serif;
-  }
-  .match-report-image {
-    width: 100%;
-    max-height: 320px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-    margin-bottom: 22px;
-    background: #e3e7f1;
-    display: block;
-  }
-  .match-report h2 {
-    color: #1a237e;
-    margin-top: 0;
-  }
-  .match-report h3 {
-    color: #26328c;
-    margin-top: 28px;
-    margin-bottom: 10px;
-  }
-  .match-report h4 {
-    color: #444;
-    margin-bottom: 10px;
-  }
-  .match-report ul {
-    margin-top: 0;
-    margin-bottom: 18px;
-    padding-left: 22px;
-  }
-  .match-report p {
-    margin-bottom: 16px;
-  }
-</style>
-    
+  <meta charset="UTF-8">
+  <title>Match Report: ACZ Gladiators – Undefeated First Leg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link your main stylesheet here -->
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; color: #222; }
+    .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 32px 24px 40px 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);}
+    h1, h2, h3 { color: #0b5394; }
+    h1 { font-size: 2em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.3em; margin-top: 1.5em; }
+    .summary { background: #e7f3fe; border-left: 4px solid #2196F3; padding: 16px; margin-bottom: 24px; }
+    ul, ol { margin-left: 1.5em; }
+    .section { margin-bottom: 1.3em; }
+    .appreciation, .finalwords { background: #f9fbe7; border-left: 4px solid #cddc39; padding: 14px; margin: 1.5em 0; }
+    .best-moments, .areas-improve { background: #f3e5f5; border-left: 4px solid #8e24aa; padding: 14px; margin: 1.5em 0; }
+    .signature { font-style: italic; color: #555; margin-top: 2em; }
+    @media (max-width: 600px) {
+      .container { padding: 12px 2vw; }
+    }
+  </style>
 </head>
 <body>
-<div class="match-report-container">
-<div class="match-report">
-    <br>
-    <br>
-    <img class="match-report-image" src="../images/ParamveerT202025Team.jpeg" alt="Paramveer Team Photo">
-
-  <h2>Match Report: ACZ Gladiators – Undefeated First Leg!</h2>
-  <h4>PVCL Spring T-20 2025 – April 27, 2025</h4>
-    <p><b>1..2..3.. Go Glads..!!!</b></p>
-    <ul>
-      <li>Match report:</li>
-      <li>Before getting into the match report, I would like to cheer for the entire team to be focused on being undefeated in the first leg of the season 1..2.. 3.. Go Glads..!!! Couple of call outs..
-        <br><b>Aryan</b> is giving his final exams this week and last week, but made the effort to fly from Raleigh and play. <b>Big thanks</b> – it's not easy what he did in the past couple of weeks.</li>
-      <li><b>Rushi</b> has been consistently flying from NJ to make sure we do well here. Just having him on the side gives the entire team a sense of relief, but again, what he does is not easy – managing family, NJ cricket commitments, and his job. It's a lot. We as a team need to figure out how we can contribute to the efforts and commitment from both Aryan and Rushi. <b>Big cheers to both of them.. 1..2..3.. Go Glads..!!</b></li>
-      <li>There are multiple other players who are local here and are giving their 110% this year. Thanks to all, and big cheers for all of you.<br>
-        <b>1..2..3.. Go Glads..!!</b>
-      </li>
-      <li><b>Toss:</b> It was crucial. The pitch was wet, so it was obvious to win and bowl first. The ball was gripping, it bounced, but it was a very slow track and difficult to bat on early in the morning. We won the toss and put the opposition in to bat first – honestly, a good toss to win.</li>
-      <li><b>Bowling:</b> As a new team, we are doing a lot of things right, one of them being knowing our roles and delivering on expectations so far. Let's keep building on this.</li>
-      <li>Govind and Krishna provided a great start and our fielders did a great job of supporting them and all other bowlers. Akhil and Ansh made sure we kept their batsmen under pressure and kept on getting wickets at regular intervals – we never let the opposition off the hook.</li>
-      <li>Rushi bowled his 4 overs and dismantled the opposition by grabbing 3 wickets from the other end. Then our fast bowlers Krishna, Govind, and Akhil just finished up the tail. Akshay also bowled one over and grabbed a wicket to his name. The variety of our bowling unit is immense.</li>
-      <li>We had a leg spinner in Aniket who was waiting on the sidelines if needed – thanks for everything you did Aniket, and I'm sure your time will come soon.</li>
-      <li>Our field placement is improving as we bowled our 20 overs in the given time, even earlier, so we are starting to do a few things right, while still having room for improvement.</li>
-      <li><b>Batting:</b> Job was half done with the way our bowlers bowled. Our discussion in the huddle was simple: don't give them opportunities to catch, play everything on the ground, and punish the loose balls – and the game is ours.</li>
-      <li>Credit to the opposition team for bagging 2 of our top batsmen for less than 15 runs. Aiyaz bhai went in at number 4 and was looking good with Aryan, but soon the 3rd wicket fell at 35. Batting was not easy on this track.</li>
-      <li>Aryan and Ansh played very sensibly, knocking the ball around, running hard, and punishing everything in their range. We were under a little pressure at 35-3, but Ansh and Aryan saw us through.</li>
-      <li><b>Great batting performance from them.</b></li>
-      <li><b>Overall:</b> Good victory heading into the bye week being undefeated. Enjoy the week off and keep working hard. Our next game is against the Pacers, who are playing a strong brand of cricket themselves and will put our bowling, batting, and fielding to the test.</li>
-      <li><b>Special shout out to Indraj and Sukesh</b> for coming and supporting the team from the sidelines. Having Sukesh on the ground on time gave us the opportunity for a substitute and we sure did utilize it. Again, a winning season is about all collective efforts on and off the field, so let's continue to do that for the remainder of the season.</li>
-      <li><b>1..2..3.. Go Glads..!!</b></li>
-    </ul>
+  <div class="container">
+    <h1>Match Report: Undefeated in the First Leg!</h1>
+    <div class="summary">
+      <strong>Focused, United, and Undefeated – 1…2…3… Go Glads!</strong>
     </div>
-</div>
+
+    <div class="section">
+      <p>
+        Before getting into the match report, I would like to cheer for the entire team for being focused on staying undefeated in the first leg of the season. <strong>1…2…3… Go Glads…!!!</strong>
+      </p>
+      <p>
+        <strong>Special callouts:</strong><br>
+        Aryan is giving his final exams this week and last week, but still made the effort to fly from Raleigh and play. <strong>Big thanks</strong> – it’s not easy what he did in the past couple of weeks.<br><br>
+        Rushi has been consistently flying from NJ to make sure we do well here. Just having him on the side gives the entire team a sense of relief. But again, what he does is not easy – managing family, NJ cricket commitments, and then taking care of his job. It’s a lot. We as a team need to figure out how we can contribute to the efforts and commitment from both Aryan and Rushi. <strong>Big cheers to both of them… 1…2…3… Go Glads…!!</strong>
+      </p>
+      <p>
+        There are multiple other players who are local here and are giving their 110% this year. Thanks to all, and big cheers for all of you. <strong>1…2…3… Go Glads…!!</strong>
+      </p>
+    </div>
+
+    <h2>Toss</h2>
+    <div class="section">
+      <p>
+        It was crucial – the pitch was wet, and it was obvious that winning the toss and bowling first would be an advantage. The ball was gripping, bouncing, but the track was slow and difficult to bat on early in the morning. We won the toss and put the opposition in to bat first. Honestly, a good toss to win.
+      </p>
+    </div>
+
+    <h2>Bowling</h2>
+    <div class="section">
+      <p>
+        As a new team, we are doing a lot of things right, and one of them is knowing our roles and delivering on those expectations so far. Let’s keep building on this.<br><br>
+        Govind and Krishna provided a great start, and our fielders did a fantastic job supporting them and all the other bowlers. Akhil and Ansh made sure we kept their batsmen under pressure and kept getting wickets at regular intervals – we never let the opposition off the hook. Rushi bowled his 4 overs and dismantled the opposition by grabbing 3 wickets from the other end. Then our fast bowlers – Krishna, Govind, and Akhil – finished up the tail. Oh, by the way, Akshay also bowled one over and grabbed a wicket to his name. The variety of our bowling unit is immense – we even had a leg spinner in Aniket waiting on the sidelines if needed. Thanks for everything you did, Aniket, and I am sure your time will come soon.<br><br>
+        I do want to call out that our field placement is improving as we bowled our 20 overs in the given time – even earlier – so we are starting to do a few things right, while still having room for improvement.
+      </p>
+    </div>
+
+    <h2>Batting</h2>
+    <div class="section">
+      <p>
+        The job was half done with the way our bowlers bowled. Our discussion in the huddle was simple: don’t give them opportunities to catch, play everything on the ground, and punish the loose balls – and the game is ours.<br><br>
+        Credit to the opposition team for bagging 2 of our top batsmen for less than 15 runs. Aiyaz bhai went in at number 4 and was looking good with Aryan. But soon, the 3rd wicket fell at 35. Batting was not easy on this track. Aryan and Ansh played very sensibly, knocking the ball around, running hard, and punishing everything in their range. We were under a little pressure at 35-3, but Ansh and Aryan saw us through. Great batting performance from them.
+      </p>
+    </div>
+
+    <div class="best-moments">
+      <h2>Best Moments & Good Points</h2>
+      <ul>
+        <li>Govind and Krishna’s opening spell set the tone with great support from the fielders.</li>
+        <li>Akhil and Ansh kept the pressure on and took wickets at regular intervals.</li>
+        <li>Rushi’s 3-wicket haul dismantled the opposition’s middle order.</li>
+        <li>Akshay chipped in with a wicket in his over; Aniket ready as leg spinner backup.</li>
+        <li>Field placements and over-rate much improved – 20 overs bowled within time.</li>
+        <li>Aryan and Ansh’s sensible batting partnership under pressure.</li>
+        <li>Local players giving 110% and supporting the team’s undefeated run.</li>
+      </ul>
+    </div>
+
+    <div class="areas-improve">
+      <h2>Areas to Improve</h2>
+      <ul>
+        <li>Continue working on field placements and adapting quickly to match situations.</li>
+        <li>Keep the intensity high in the field and support bowlers with sharp fielding.</li>
+        <li>Maintain focus in the batting – minimize risky shots and capitalize on loose deliveries.</li>
+        <li>As a team, let’s keep finding ways to support players making extra efforts (travel, commitments, etc.).</li>
+      </ul>
+    </div>
+
+    <div class="finalwords">
+      <h2>Final Words</h2>
+      <p>
+        Overall, a good victory heading into the bye week while being undefeated. Enjoy the week off and keep working hard. Our next game is against the Pacers, who are playing a strong brand of cricket themselves and will put our bowling, batting, and fielding to the test.
+      </p>
+      <p>
+        Special shout out to Indraj and Sukesh for coming and supporting the team from the sidelines. Having Sukesh on the ground on time gave us the opportunity for a substitute, and we sure did utilize it. Again, a winning season is about all collective efforts on and off the field, so let’s continue to do that for the remainder of the season… <strong>1…2…3… Go Glads…!!</strong>
+      </p>
+    </div>
+
+    <div class="section" style="text-align:center; font-size:1.15em; margin-top:2em;">
+      <strong>Let’s stay focused, keep the momentum, and go for more wins!<br><br>
+      1… 2… 3… GO GLADS</strong>
+    </div>
+
+    <div class="signature">
+      <p>- ACZ Gladiators Captain</p>
+      <p style="font-size:0.95em; color:#888;">Report published: April 30, 2025</p>
+    </div>
+  </div>
 </body>
+</html>
